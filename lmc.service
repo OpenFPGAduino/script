@@ -1,0 +1,13 @@
+[Unit]
+Description=Lophilo Management Console
+
+[Service]
+User=lophilo
+WorkingDirectory=/home/lophilo/ide/
+#ExecStart=/usr/local/bin/node /home/lophilo/local/lmc/app.js
+ExecStart=/usr/local/bin/node /home/lophilo/ide/server.js > /home/lophilo/ide/log 
+Restart=always
+RestartSec=0
+
+[Install]
+WantedBy=multi-user.target
