@@ -1,0 +1,12 @@
+[Unit]
+Description=Openfpgaduino IDE
+
+[Service]
+User=lophilo
+WorkingDirectory=/home/openfpgaduino/ArduinoIDE/
+ExecStart=/usr/local/bin/node /home/openfpgaduino/ArduinoIDE/server.js > /home/openfpgaduino/ArduinoIDE/log 
+Restart=always
+RestartSec=0
+
+[Install]
+WantedBy=multi-user.target
