@@ -1,0 +1,12 @@
+[Unit]
+Description=Openfpgaduino FPGA IDE
+
+[Service]
+User=openfpgaduino
+WorkingDirectory=/home/openfpgaduino/FPGAdesigner/
+ExecStart=/bin/node /home/openfpgaduino/FPGAdesigner/server.js > /home/openfpgaduino/FPGAdesigner/log 
+Restart=always
+RestartSec=0
+
+[Install]
+WantedBy=multi-user.target

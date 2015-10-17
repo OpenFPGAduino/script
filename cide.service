@@ -1,5 +1,5 @@
 [Unit]
-Description=Openfpgaduino IDE
+Description=Openfpgaduino C IDE
 
 [Service]
 User=openfpgaduino
