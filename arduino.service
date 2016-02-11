@@ -1,0 +1,12 @@
+[Unit]
+Description=Openfpgaduino restapi server
+
+[Service]
+User=openfpgaduino
+WorkingDirectory=/home/openfpgaduino/Arduinojs/
+ExecStart=/bin/node /home/openfpgaduino/Arduinojs/server.js > /home/openfpgaduino/ArduinoIDE/log 
+Restart=always
+RestartSec=0
+
+[Install]
+WantedBy=multi-user.target
